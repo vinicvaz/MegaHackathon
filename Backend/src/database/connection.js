@@ -1,10 +1,10 @@
-const knex = require('knex')
-const configuration = require('../../knexfile')
-const path = require('path')
-require('dotenv').config(path.join(__dirname, '..', '..'))
+const knex = require("knex");
+const configuration = require("../../knexfile");
+const path = require("path");
+require("dotenv").config(path.join(__dirname, "..", ".."));
 
-const config = false ? configuration.production : configuration.development
+const config = configuration.development;
 
-const connection = knex(config)
+const connection = knex(config);
 
-module.exports = connection
+module.exports = connection;

@@ -166,7 +166,7 @@ class ClassifierModel:
             return question_return
 
 
-'''
+
 if __name__ == '__main__':
     model = ClassifierModel('.')
     while True:
@@ -182,4 +182,4 @@ if __name__ == '__main__':
         result = model.run_models(data)
 
         print(result)
-'''
+

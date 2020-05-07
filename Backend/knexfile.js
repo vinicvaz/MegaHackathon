@@ -1,21 +1,20 @@
 // Update with your config settings.
-require('dotenv').config()
-const { HOST, DATABASE, USER_DB, PASSWORD } = process.env
+require("dotenv").config();
+const { HOST, DATABASE, USER_DB, PASSWORD } = process.env;
 
 module.exports = {
   development: {
-    client: 'sqlite3',
+    client: "sqlite3",
     connection: {
-      filename: './src/database/db.sqlite3'
+      filename: "./src/database/db.sqlite3",
     },
-    migrations:{
-      directory:'./src/database/migrations',
-
+    migrations: {
+      directory: "./src/database/migrations",
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
   },
   production: {
-    client: 'postgresql',
+    client: "postgresql",
     connection: {
       host: `${HOST}`,
       database: `${DATABASE}`,
@@ -27,8 +26,8 @@ module.exports = {
       max: 10,
     },
     migrations: {
-      directory: './src/database/migrations',
+      directory: "./src/database/migrations",
     },
     useNullAsDefault: true,
   },
-}
+};
